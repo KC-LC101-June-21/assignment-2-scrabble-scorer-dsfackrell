@@ -1,6 +1,10 @@
 language = "nodejs"
 <<<<<<< HEAD
+<<<<<<< HEAD
 run = "npm start"
+=======
+run = "npm i && node program"
+>>>>>>> origin/master
 =======
 run = "npm i && node program"
 >>>>>>> origin/master
