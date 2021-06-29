@@ -35,6 +35,8 @@ function oldScrabbleScorer(word) {
 function initialPrompt() {
    console.log("Let's play some scrabble! Enter a word:");
    let wordToScore = input.question("Enter a word to score: ");
+
+   oldScrabbleScorer(wordToScore);
 };
 
 let simpleScore;
