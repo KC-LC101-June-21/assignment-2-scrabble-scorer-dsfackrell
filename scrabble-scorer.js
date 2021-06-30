@@ -112,18 +112,20 @@ function scorerPrompt() {
 }
 
 function transform(obj) {
+  let newObj = {};
   for (const key in obj) {
     for (i = 0; i < obj[key].length; i++) {
       let newKey = obj[key][i].toLowerCase();
-      newPointStructure[newKey] = Number(key);
+      newObj[newKey] = Number(key);
     }
   }
+  return newObj;
 };
 
 let newPointStructure = {};
 
 function runProgram() {
-  transform(oldPointStructure);
+  newPointStructure = transform(oldPointStructure);
   initialPrompt();
   //scorerPrompt();
    
