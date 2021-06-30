@@ -127,7 +127,7 @@ function transform(obj) {
 let newPointStructure = transform(oldPointStructure);
 
 function runProgram() {
-  console.log(scoringAlgorithms);
+  //console.log(scoringAlgorithms);
   initialPrompt();   
 }
 
