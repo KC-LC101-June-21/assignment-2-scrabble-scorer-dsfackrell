@@ -126,6 +126,7 @@ let newPointStructure = {};
 
 function runProgram() {
   newPointStructure = transform(oldPointStructure);
+  console.log(newPointStructure);
   initialPrompt();
   //scorerPrompt();
    
