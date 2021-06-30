@@ -122,10 +122,10 @@ function transform(obj) {
   return newObj;
 };
 
-let newPointStructure = {};
+let newPointStructure = transform(oldPointStructure);
 
 function runProgram() {
-  newPointStructure = transform(oldPointStructure);
+  //newPointStructure = transform(oldPointStructure);
   console.log(newPointStructure);
   initialPrompt();
   //scorerPrompt();
