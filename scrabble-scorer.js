@@ -13,7 +13,7 @@ const oldPointStructure = {
   8: ['J', 'X'],
   10: ['Q', 'Z']
 };
-
+/*
 let simpleScoreObj = {
   name: "Simple Score",
   description: "Each letter is worth 1 point.",
@@ -21,6 +21,7 @@ let simpleScoreObj = {
     return simpleScore(word);
   }
 };
+*/
 
 let vowelBonusScoreObj = { 
   name: "Bonus Vowels",
@@ -68,10 +69,19 @@ function initialPrompt() {
    console.log(`Score for '${wordToScore}': ${scrabbleScore}`);
 
 };
-
+/*
 let simpleScore = function(word) {
   let points = word.length;
   return points;
+};*/
+
+let simpleScore = {
+  name: "Simple Score",
+  description: "Each letter is worth 1 point.",
+  scoreFunction: function(word) {
+    return word.length;
+    //return simpleScore(word);
+  }
 };
 
 let vowelBonusScore = function(word) {
@@ -98,7 +108,8 @@ let scrabbleScore = function(word) {
   return points;
 };
 
-const scoringAlgorithms = [simpleScoreObj, vowelBonusScoreObj, scrabbleScoreObj];
+//const scoringAlgorithms = [simpleScoreObj, vowelBonusScoreObj, scrabbleScoreObj];
+const scoringAlgorithms = [simpleScore, vowelBonusScoreObj, scrabbleScoreObj];
 
 function scorerPrompt() {
   console.log("which scoring algorithm would like to use \n");
@@ -125,11 +136,8 @@ function transform(obj) {
 let newPointStructure = transform(oldPointStructure);
 
 function runProgram() {
-  //newPointStructure = transform(oldPointStructure);
-  console.log(newPointStructure);
-  initialPrompt();
-  //scorerPrompt();
-   
+  console.log(scoringAlgorithms);
+  initialPrompt();   
 }
 
 // Don't write any code below this line //
