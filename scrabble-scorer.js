@@ -14,7 +14,13 @@ const oldPointStructure = {
   10: ['Q', 'Z']
 };
 
-
+let simpleScoreObj = {
+  name: "Simple Score",
+  description: "Each letter is worth 1 point.",
+  scoringFunction: function(word) {
+    return simpleScore(word);
+  }
+};
 
 
 let vowelBonusScoreObj = { 
@@ -25,13 +31,7 @@ let vowelBonusScoreObj = {
   }
 };
 
-let scrabbleScoreObj = {
-  name: "Scrabble",
-  description: "The traditional scoring algorithm.",
-  scoringFunction: function(word) {
-    return scrabbleScore(word);
-  }
-}
+
 
 function oldScrabbleScorer(word) {
 	word = word.toUpperCase();
@@ -94,13 +94,12 @@ let scrabbleScore = function(word) {
   return points;
 };
 
-let simpleScoreObj = {
-  name: "Simple Score",
-  description: "Each letter is worth 1 point.",
-  scoringFunction: function(word) {
-    return simpleScore(word);
-  }
-};
+let scrabbleScoreObj = {
+  name: "Scrabble",
+  description: "The traditional scoring algorithm.",
+  scoringFunction: scrabbleScore
+  
+}
 
 const scoringAlgorithms = [simpleScoreObj, vowelBonusScoreObj, scrabbleScoreObj];
 
