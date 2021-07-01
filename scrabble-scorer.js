@@ -14,7 +14,6 @@ const oldPointStructure = {
   10: ['Q', 'Z']
 };
 
-
 let simpleScoreObj = {
   name: "Simple Score",
   description: "Each letter is worth 1 point.",
