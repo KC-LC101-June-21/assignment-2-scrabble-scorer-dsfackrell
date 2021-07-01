@@ -17,7 +17,7 @@ const oldPointStructure = {
 let simpleScoreObj = {
   name: "Simple Score",
   description: "Each letter is worth 1 point.",
-  scoreFunction: function(word) {
+  scoringFunction: function(word) {
     return simpleScore(word);
   }
 };
@@ -26,7 +26,7 @@ let simpleScoreObj = {
 let vowelBonusScoreObj = { 
   name: "Bonus Vowels",
   description: "Vowels are 3 pts, consonants are 1 pt.",
-  scoreFunction: function(word) {
+  scoringFunction: function(word) {
     return vowelBonusScore(word);
   }
 };
@@ -34,7 +34,7 @@ let vowelBonusScoreObj = {
 let scrabbleScoreObj = {
   name: "Scrabble",
   description: "The traditional scoring algorithm.",
-  scoreFunction: function(word) {
+  scoringFunction: function(word) {
     return scrabbleScore(word);
   }
 }
@@ -64,7 +64,7 @@ function initialPrompt() {
    console.log();
    let wordToScore = input.question("Enter a word to score: ");
    let scorer = scorerPrompt();
-   scrabbleScore = scorer.scoreFunction(wordToScore);
+   scrabbleScore = scorer.scoringFunction(wordToScore);
    console.log();
    console.log(`Score for '${wordToScore}': ${scrabbleScore}`);
 
