@@ -14,13 +14,7 @@ const oldPointStructure = {
   10: ['Q', 'Z']
 };
 
-let simpleScoreObj = {
-  name: "Simple Score",
-  description: "Each letter is worth 1 point.",
-  scoringFunction: function(word) {
-    return simpleScore(word);
-  }
-};
+
 
 
 let vowelBonusScoreObj = { 
@@ -98,6 +92,14 @@ let scrabbleScore = function(word) {
     points = points + newPointStructure[letter];
   }
   return points;
+};
+
+let simpleScoreObj = {
+  name: "Simple Score",
+  description: "Each letter is worth 1 point.",
+  scoringFunction: function(word) {
+    return simpleScore(word);
+  }
 };
 
 const scoringAlgorithms = [simpleScoreObj, vowelBonusScoreObj, scrabbleScoreObj];
