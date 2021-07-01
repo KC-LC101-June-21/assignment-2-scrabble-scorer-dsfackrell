@@ -22,18 +22,11 @@ let simpleScoreObj = {
     return simpleScore(word);
   }
 };
-/*
-let simpleScoreObj = {
-  name: "Simple Score",
-  description: "Each letter is worth 1 point.",
-  scoreFunction: simpleScore(word)
-  
-};*/
 
 
 let vowelBonusScoreObj = { 
   name: "Bonus Vowels",
-  description: "Vowels are 3 pts, consonants are 1 pt. ",
+  description: "Vowels are 3 pts, consonants are 1 pt.",
   scoreFunction: function(word) {
     return vowelBonusScore(word);
   }
@@ -41,7 +34,7 @@ let vowelBonusScoreObj = {
 
 let scrabbleScoreObj = {
   name: "Scrabble",
-  description: "The traditional scoring algorithm. ",
+  description: "The traditional scoring algorithm.",
   scoreFunction: function(word) {
     return scrabbleScore(word);
   }
@@ -135,7 +128,7 @@ function transform(obj) {
 let newPointStructure = transform(oldPointStructure);
 
 function runProgram() {
-  console.log(scoringAlgorithms);
+  //console.log(scoringAlgorithms);
   initialPrompt();   
 }
 
