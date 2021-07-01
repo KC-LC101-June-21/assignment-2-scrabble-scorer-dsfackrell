@@ -101,7 +101,7 @@ let scrabbleScore = function(word) {
   return points;
 };
 
-const scoringAlgorithms = [simpleScore, vowelBonusScore, scrabbleScore];
+const scoringAlgorithms = [simpleScoreObj, vowelBonusScoreObj, scrabbleScoreObj];
 
 
 function scorerPrompt() {
@@ -129,7 +129,6 @@ function transform(obj) {
 let newPointStructure = transform(oldPointStructure);
 
 function runProgram() {
-  //console.log(scoringAlgorithms);
   initialPrompt();   
 }
 
